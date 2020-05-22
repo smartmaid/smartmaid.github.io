@@ -876,6 +876,19 @@
 	<script src="assets/js/switcher.js"></script>
 	<!-- main JS -->
 	<script src="assets/js/main.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh9XJSGPXyIsHlXoeDroH7y_ujofj4xaw&callback=initMap"
+		async defer></script>
+	<script type="text/javascript">
+		function initMap() {
+			var map = new google.maps.Map(document.getElementById('show_maps'), {
+				center: {
+					lat: -1.035721,
+					lng: 118.436931
+				},
+				zoom: 5
+			});
+		}
+	</script>
 </body>
 
 </html>
