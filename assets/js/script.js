@@ -3,9 +3,9 @@ var map, infoWindow;
 function createMap() {
   var options = {
     center: {
-      lat: -6.91836432,
+      lat: -6.917882,
       ,
-      lng: 107.61358649
+      lng: 107.6139646
     },
     zoom: 10
   };
