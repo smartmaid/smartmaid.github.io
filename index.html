@@ -737,20 +737,18 @@
 	</section><!-- blog section end -->
 	<!-- google map area start -->
 	<div class="google-map"></div>
-	<div id="map"></div>
+	<div id="googleMap"></div>
 	<script>
-		var map;
-		function initMap(){
-			var options = {
-				zoom:8,
-				center:{lat:-6.932694,lng:107.627449}
-			}
+		function initialize() {
+			var propertiPeta = {
+				center: new google.maps.LatLng(-6.91836432, 107.61358649),
+				zoom: 9,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
 		}
-		var map = new google.maps.Map(document.getElementById('map'), options);
+		google.maps.event.addDomListener(window, 'load', initialize);
 	</script>
-	
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjPlEIDMN8jIZ_Tbga9SOm0u7X_OJX9Lk&callback=initMap"
-  type="text/javascript"></script>
 	<!-- google map area end -->
 	<!-- footer section start -->
 	<footer class="footer" id="contact">
@@ -881,6 +879,7 @@
 	<!-- Gmap JS -->
 	<script src="assets/js/gmap3.min.js"></script>
 	<!-- Google map api -->
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	<!-- Custom map JS -->
 	<script src="assets/js/custom-map.js"></script>
 	<!-- WOW JS -->
@@ -889,7 +888,7 @@
 	<script src="assets/js/switcher.js"></script>
 	<!-- main JS -->
 	<script src="assets/js/main.js"></script>
-	
+
 </body>
 
 </html>
