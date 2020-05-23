@@ -736,17 +736,18 @@
 		</div>
 	</section><!-- blog section end -->
 	<!-- google map area start -->
-	<div class="google-map" id="map"></div>
-	<script>
-		function initMap() {
-			var location = {lat: -6.91836432, lng: 107.61358649};
-			var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 5,
-				center:location
-			});
-		}
-	</script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuImrhEqoR43A7UkSlc6JF9TeBmVCfJTw&callback=initMap"
+	<div class="google-map"></div>
+	<div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo1hWTDuK-vl6fPxHRUvC8MPHp86rDVCk&callback=initMap"
   type="text/javascript"></script>
 	<!-- google map area end -->
 	<!-- footer section start -->
