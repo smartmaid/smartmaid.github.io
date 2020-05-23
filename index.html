@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="zxx">
+<html lang="en">
 
 <head>
 	<meta name="google-site-verification" content="lN-S2Q_pN6D2cXtE8T_a2GiNpntJQEOjGQusQbbrLc8" />
@@ -738,17 +738,18 @@
 	<!-- google map area start -->
 	<div class="google-map"></div>
 	<div id="map"></div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -6.91836432, lng: 107.61358649},
-          zoom: 8,
-					center:location
-        });
-      }
-    </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo1hWTDuK-vl6fPxHRUvC8MPHp86rDVCk&callback=initMap"
+	<script>
+		var map;
+		function initMap(){
+			var options = {
+				zoom:8,
+				center:{lat:-6.932694,lng:107.627449}
+			}
+		}
+		var map = new google.maps.Map(document.getElementById('map'), options);
+	</script>
+	
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjPlEIDMN8jIZ_Tbga9SOm0u7X_OJX9Lk&callback=initMap"
   type="text/javascript"></script>
 	<!-- google map area end -->
 	<!-- footer section start -->
@@ -880,7 +881,6 @@
 	<!-- Gmap JS -->
 	<script src="assets/js/gmap3.min.js"></script>
 	<!-- Google map api -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnKyOpsNq-vWYtrwayN3BkF3b4k3O9A_A"></script>
 	<!-- Custom map JS -->
 	<script src="assets/js/custom-map.js"></script>
 	<!-- WOW JS -->
